@@ -205,3 +205,21 @@ cython_debug/
 marimo/_static/
 marimo/_lsp/
 __marimo__/
+
+
+Trajectories/results
+#FLAML creates folders starts with catboost
+Trajectories/catboost_*
+Policies/lcpfn/trained_models
+
+PFN4CASHPlus/lcpfn/trained_models
+PFN4CASHPlus/wandb
+PFN4CASHPlus/bandit/results
+
+BudgetAwareBandits/results
+BudgetAwareBandits/results*
+Analysis/PFN/synth/results
+Analysis/PFN/synth/dataset
+Analysis/PFN/trained_models
+Datasets/*.csv
+Datasets/*.json

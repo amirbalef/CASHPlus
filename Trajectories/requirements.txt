@@ -1,0 +1,4 @@
+amltk[smac]
+flaml[automl]
+smac
+autogluon 

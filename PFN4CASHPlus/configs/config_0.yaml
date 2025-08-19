@@ -1,0 +1,28 @@
+# For test
+note: "For test"
+
+model:
+  name: "PFN_test"
+  emsize: 128
+  nlayers: 3
+  num_borders: 1000
+  #borders_range: "non_linear"
+  seq_len : 200
+  decoder: "cascaded"
+  single_eval_pos_gen:  "unifrom" #"weighted" #
+
+train:
+  epochs: 10
+  learning_rate: 0.001
+  batch_size: 32
+  optimizer: "AdamW"
+  weighted_loss : True
+  saving_period: 1
+
+data:
+  outputs: ["max"] #, "min"
+  train_priors: "synth_mix"
+  function_index: 0
+  val_priors: "real_data"
+  val_num_output: 1
+  max_seq_len : 200

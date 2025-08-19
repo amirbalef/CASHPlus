@@ -1,0 +1,26 @@
+note: "With paper priors with 1 output"
+
+model:
+  name: "Curved"
+  emsize: 512
+  nlayers: 6
+  num_borders: 1000
+  seq_len : 200
+  decoder: "default"
+  single_eval_pos_gen: "weighted"
+
+train:
+  epochs: 1000
+  learning_rate: 0.0001
+  batch_size: 100
+  optimizer: "AdamW"
+  weighted_loss : False
+  saving_period: 50
+  
+data:
+  outputs: ["max"]
+  train_priors: "synth_paper"
+  function_index: 2
+  val_priors: "real_data"
+  val_num_output: 1
+  max_seq_len : 200
